@@ -1,0 +1,145 @@
+**Research Proposal**
+
+**Title:** *Crisis Communication on Social Media: An NLP-Based Analysis
+of Firm Responses Using Twitter/X Data*
+
+**1. Introduction**
+
+Crises such as product recalls, cybersecurity breaches, and supply chain
+disruptions significantly impact firms' reputations. With the rise of
+social media, companies increasingly rely on platforms like Twitter/X to
+communicate with stakeholders in real time. However, the effectiveness
+of these digital communication strategies remains poorly understood in
+the Information Systems (IS) literature.
+
+This study proposes to use **Natural Language Processing (NLP)** to
+analyze firms' crisis communication strategies on Twitter/X. By
+examining the **sentiment, emotional tone, and public engagement** of
+crisis-related tweets, we aim to uncover which strategies mitigate
+public backlash and rebuild trust.
+
+**2. Research Questions**
+
+1.  How do firms use Twitter/X to communicate during crises?
+
+2.  What types of sentiment and emotional tones are associated with
+    higher public engagement?
+
+3.  Do empathetic communication strategies reduce negative public
+    sentiment compared to defensive or neutral ones?
+
+4.  Can sentiment and emotion analysis predict the effectiveness of
+    crisis communication strategies?
+
+**3. Methodology**
+
+**3.1 Data Collection**
+
+-   **Source**: Twitter/X.
+
+-   **Tool**: snscrape (no API required) or Tweepy (if API key
+    available).
+
+-   **Target Data**: Tweets posted by selected firms during known crises
+    (e.g., Toyota recalls, Equifax data breach).
+
+-   **Data Points**: Tweet text, date, likes, retweets, replies,
+    hashtags, mentions.
+
+Python automation with AI assistant:
+
+-   Script generation for scraping.
+
+-   Automatic cleaning & labeling of firm tweets vs public replies.
+
+**3.2 Preprocessing**
+
+-   Cleaning: Remove hashtags, mentions, URLs.
+
+-   Tokenization, stopword removal, lemmatization (spaCy, NLTK).
+
+-   Storage in structured format (pandas, SQLite).
+
+**3.3 Analysis**
+
+1.  **Sentiment Analysis**
+
+    -   VADER for polarity scores (positive, negative, neutral).
+
+2.  **Emotion Detection**
+
+    -   NRCLex or Hugging Face models (e.g.,
+        twitter-roberta-base-sentiment, GoEmotions).
+
+3.  **Engagement Analysis**
+
+    -   Statistical correlation between firm tweet tone and public
+        engagement (likes, retweets).
+
+4.  **Crisis Communication Effectiveness**
+
+    -   Compare sentiment/emotion of **firm tweets** with
+        **sentiment/emotion of replies**.
+
+    -   Build a machine learning classifier (scikit-learn, XGBoost) to
+        predict engagement effectiveness.
+
+**3.4 Validation**
+
+-   Use multiple crises from different industries (automotive, finance,
+    healthcare).
+
+-   Compare patterns across sectors to ensure robustness.
+
+**4. Expected Contributions**
+
+**Theoretical**
+
+-   Extend IS research by providing **computational evidence** on
+    digital crisis communication.
+
+-   Contribute to literature on **social media as an information
+    system** for organizational reputation management.
+
+**Practical**
+
+-   Provide managers with **data-driven insights** on effective crisis
+    messaging.
+
+-   Offer a Python-based **dashboard prototype** for real-time
+    monitoring of sentiment during crises.
+
+**5. Tools & Implementation Plan (Python only)**
+
+-   **Data Collection**: snscrape, Tweepy
+
+-   **Preprocessing**: pandas, NLTK, spaCy
+
+-   **Sentiment/Emotion**: VADER, NRCLex, Hugging Face Transformers
+
+-   **Modeling**: scikit-learn, XGBoost
+
+-   **Visualization**: matplotlib, seaborn, plotly
+
+-   **AI Assistant Support**:
+
+    -   Generate Python scripts for scraping/analysis.
+
+    -   Automate text cleaning and sentiment extraction.
+
+    -   Create visualizations and draft result summaries.
+
+    -   Assist in writing methodology & results sections.
+
+**6. Timeline (4--5 months)**
+
+-   **Month 1**: Literature review, finalize crisis events, set up data
+    scraping.
+
+-   **Month 2**: Data collection + preprocessing pipeline.
+
+-   **Month 3**: Sentiment & emotion analysis + engagement metrics.
+
+-   **Month 4**: Modeling + result visualization.
+
+-   **Month 5**: Write-up + submission to journal (DSS, ISF, JMIS).
